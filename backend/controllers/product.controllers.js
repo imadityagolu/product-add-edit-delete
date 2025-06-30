@@ -11,8 +11,19 @@ const addproduct = async(req, res) => {
     }
 }
 
+const listProduct = async(req, res) => {
+    try{
+        const product = await ProductModel.find();
+        res.status(200).json(product);
+    } catch(error) {
+        console.log("Error while listing products : ", error);
+        res.status(500).json({ message: "Failed to list products", error: error.message });
+    }
+}
+
 const productControllers = {
-    addproduct
+    addproduct,
+    listProduct
 };
 
 module.exports = productControllers;
