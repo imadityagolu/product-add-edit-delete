@@ -46,7 +46,7 @@ function AllProducts() {
     }
   };
 
-  //to start edit
+  //to edit
   const startEdit = (product) => {
     setEditId(product._id);
     setEditName(product.name);
