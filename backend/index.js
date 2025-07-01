@@ -25,4 +25,4 @@ mongoose.connect(process.env.MONGO_URL)
 app.use("/product", productRoutes);
 
 //starting server
-app.listen(process.env.PORT, () => console.log(`server - http://localhost:${process.env.PORT} , Frontend - ${process.env.FRONTEND_URL}`));
+app.listen(process.env.PORT, () => console.log(`server - http://localhost:${process.env.PORT}`));

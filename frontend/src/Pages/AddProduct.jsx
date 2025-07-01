@@ -24,11 +24,11 @@ function AddProduct() {
             const data = await res.json();
 
             if(res.ok){
-                setMessage('Product Added');
+                setMessage('Server Response : '+ data.alert);
                 setName('');
                 setPrice('');
             } else {
-                setMessage('Error : ' + data.error || 'Error');
+                setMessage('Server Response : ' + data.error || 'Error');
             }
 
         } catch(error) {
